@@ -1,0 +1,7 @@
+com\examly\springapp\controller\ApiController.class
+com\examly\springapp\SpringappApplication.class
+com\examly\springapp\repository\BiketaxiRepo.class
+com\examly\springapp\service\BiketaxiService.class
+com\examly\springapp\configuration\CorsConfiguration.class
+com\examly\springapp\configuration\CorsConfiguration$1.class
+com\examly\springapp\model\Biketaxi.class
