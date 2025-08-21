@@ -11,7 +11,7 @@ const DisplayBikes = () => {
 
   const fetchBiketaxis = async () => {
     try {
-      const response = await fetch('/getAllBiketaxi');
+      const response = await fetch('http://localhost:8080/getAllBiketaxi');
       
       if (response.ok) {
         const data = await response.json();
