@@ -36,8 +36,5 @@ public class ApiController {
         }
     }
     
-    @GetMapping("/test")
-    public String test() {
-        return "Backend is working!";
-    }
+
 }
