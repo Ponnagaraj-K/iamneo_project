@@ -35,4 +35,9 @@ public class ApiController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+    
+    @GetMapping("/test")
+    public String test() {
+        return "Backend is working!";
+    }
 }
