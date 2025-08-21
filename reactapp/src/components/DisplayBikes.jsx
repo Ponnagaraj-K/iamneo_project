@@ -11,16 +11,16 @@ const DisplayBikes = () => {
 
   const fetchBiketaxis = async () => {
     try {
-      const response = await fetch('http://localhost:8080/getAllBiketaxi');
+      const response = await fetch('/getAllBiketaxi');
       
       if (response.ok) {
         const data = await response.json();
         setBiketaxis(data);
       } else {
-        setError('Failed to fetch bike taxi data');
+        setError('Backend server not running on port 8080');
       }
     } catch (error) {
-      setError('Error connecting to server');
+      setError('Backend server not running. Start Spring Boot app first.');
       console.error('Error:', error);
     } finally {
       setLoading(false);
