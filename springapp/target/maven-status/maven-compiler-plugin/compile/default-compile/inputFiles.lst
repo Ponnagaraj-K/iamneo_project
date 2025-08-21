@@ -1,5 +1,6 @@
-D:\StudentManagementSystem\springapp\src\main\java\com\example\springapp\SpringappApplication.java
-D:\StudentManagementSystem\springapp\src\main\java\com\example\springapp\Model\Employee.java
-D:\StudentManagementSystem\springapp\src\main\java\com\example\springapp\Service\EmployeeService.java
-D:\StudentManagementSystem\springapp\src\main\java\com\example\springapp\Repository\EmployeeRepo.java
-D:\StudentManagementSystem\springapp\src\main\java\com\example\springapp\Controller\ApiController.java
+e:\project.skcet\iamneo_project\springapp\src\main\java\com\examly\springapp\SpringappApplication.java
+e:\project.skcet\iamneo_project\springapp\src\main\java\com\examly\springapp\service\BiketaxiService.java
+e:\project.skcet\iamneo_project\springapp\src\main\java\com\examly\springapp\repository\BiketaxiRepo.java
+e:\project.skcet\iamneo_project\springapp\src\main\java\com\examly\springapp\configuration\CorsConfiguration.java
+e:\project.skcet\iamneo_project\springapp\src\main\java\com\examly\springapp\controller\ApiController.java
+e:\project.skcet\iamneo_project\springapp\src\main\java\com\examly\springapp\model\Biketaxi.java
