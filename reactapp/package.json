@@ -20,6 +20,7 @@
   },
   "scripts": {
     "start": "PORT=8081 DANGEROUSLY_DISABLE_HOST_CHECK=true react-scripts start",
+    "serve": "PORT=8081 serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -43,7 +44,8 @@
     ]
   },
   "devDependencies": {
-    "jest-fetch-mock": "^3.0.3"
+    "jest-fetch-mock": "^3.0.3",
+    "serve": "^14.2.0"
   },
 
   "jest": {
