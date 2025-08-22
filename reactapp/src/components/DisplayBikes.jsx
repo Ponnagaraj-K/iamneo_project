@@ -11,7 +11,7 @@ const DisplayBikes = () => {
 
   const fetchBiketaxis = async () => {
     try {
-      const response = await fetch('/proxy/8080/getAllBiketaxi', {
+      const response = await fetch('https://8080-cdaebefafaeedecddaabafefccfecdeabcadecaab.premiumproject.examly.io/getAllBiketaxi', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
