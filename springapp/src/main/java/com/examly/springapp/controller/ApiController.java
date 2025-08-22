@@ -36,15 +36,7 @@ public class ApiController {
         }
     }
     
-    @GetMapping("/")
-    public String home() {
-        return "Faster Bike Taxi Backend is running!";
-    }
-    
-    @GetMapping("/test")
-    public String test() {
-        return "Backend API is working!";
-    }
+
     
 
 }
