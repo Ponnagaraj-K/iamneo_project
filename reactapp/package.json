@@ -44,5 +44,11 @@
   },
   "devDependencies": {
     "jest-fetch-mock": "^3.0.3"
+  },
+  "jest": {
+    "moduleFileExtensions": ["js", "jsx", "json"],
+    "moduleNameMapper": {
+      "^../components/(.*)$": "<rootDir>/src/components/$1.jsx"
+    }
   }
 }
