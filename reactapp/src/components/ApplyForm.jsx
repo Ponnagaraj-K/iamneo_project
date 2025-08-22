@@ -57,7 +57,7 @@ const ApplyForm = () => {
     }
 
     try {
-      const response = await fetch('https://ide-cdaebefafaeedecddaabafefccfecdeabcadecaab.premiumproject.examly.io/proxy/8080/addBiketaxi', {
+      const response = await fetch('/proxy/8080/addBiketaxi', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
