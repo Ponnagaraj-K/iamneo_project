@@ -22,10 +22,12 @@ const DisplayBikes = () => {
         const data = await response.json();
         setBiketaxis(data);
       } else {
-        setError('Backend server not running on port 8080');
+        console.log('Response status:', response.status);
+        setError(`Backend server error: ${response.status}`);
       }
     } catch (error) {
-      setError('Backend server not running. Start Spring Boot app first.');
+      console.log('Fetch error:', error);
+      setError(`Backend connection failed: ${error.message}`);
       console.error('Error:', error);
     } finally {
       setLoading(false);
