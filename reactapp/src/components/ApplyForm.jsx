@@ -57,7 +57,7 @@ const ApplyForm = () => {
     }
 
     try {
-      const response = await fetch('/addBiketaxi', {
+      const response = await fetch('/proxy/8080/addBiketaxi', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -45,7 +45,7 @@
   "devDependencies": {
     "jest-fetch-mock": "^3.0.3"
   },
-  "proxy": "http://localhost:8080",
+
   "jest": {
     "moduleFileExtensions": ["js", "jsx", "json"],
     "moduleNameMapper": {
