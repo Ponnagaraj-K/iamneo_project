@@ -11,7 +11,7 @@ const DisplayBikes = () => {
 
   const fetchBiketaxis = async () => {
     try {
-      const response = await fetch('https://placement.skcet.ac.in/proxy/8080/getAllBiketaxi', {
+      const response = await fetch('/proxy/8080/getAllBiketaxi', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -22,12 +22,10 @@ const DisplayBikes = () => {
         const data = await response.json();
         setBiketaxis(data);
       } else {
-        console.log('Response status:', response.status);
-        setError(`Backend server error: ${response.status}`);
+        setError('Backend server not running on port 8080');
       }
     } catch (error) {
-      console.log('Fetch error:', error);
-      setError(`Backend connection failed: ${error.message}`);
+      setError('Backend server not running. Start Spring Boot app first.');
       console.error('Error:', error);
     } finally {
       setLoading(false);
