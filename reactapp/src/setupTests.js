@@ -3,14 +3,7 @@ import fetchMock from 'jest-fetch-mock';
 
 fetchMock.enableMocks();
 
-// Mock the portal URLs for testing
-global.fetch = jest.fn(() =>
-  Promise.resolve({
-    ok: true,
-    json: () => Promise.resolve([]),
-  })
-);
-
+// Reset fetch mock before each test
 beforeEach(() => {
-  fetch.mockClear();
+  fetchMock.resetMocks();
 });

@@ -50,6 +50,7 @@
     "moduleNameMapper": {
       "^../components/(.*)$": "<rootDir>/src/components/$1.jsx"
     },
-    "setupFilesAfterEnv": ["<rootDir>/src/setupTests.js"]
+    "setupFilesAfterEnv": ["<rootDir>/src/setupTests.js"],
+    "testEnvironment": "jsdom"
   }
 }
