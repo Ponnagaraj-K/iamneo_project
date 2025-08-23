@@ -3,7 +3,9 @@ import fetchMock from 'jest-fetch-mock';
 
 fetchMock.enableMocks();
 
-// Reset fetch mock before each test
+// Mock fetch globally for tests
+global.fetch = jest.fn();
+
 beforeEach(() => {
-  fetchMock.resetMocks();
+  fetch.mockClear();
 });

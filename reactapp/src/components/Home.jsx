@@ -7,9 +7,7 @@ const Home = () => {
       <main>
         <h2>Welcome to Faster Bike Taxi</h2>
         <p>Apply now to become a bike taxi driver and start earning!</p>
-        <Link to="/apply" className="apply-btn">
-          Apply Now
-        </Link>
+        <Link to="/apply">Apply Now</Link>
       </main>
     </div>
   );
