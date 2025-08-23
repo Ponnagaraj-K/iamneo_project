@@ -3,7 +3,9 @@ import React from 'react';
 const Footer = () => {
   return (
     <div className="footer">
-      <p>© 2023 Faster Bike Taxi. All rights reserved.</p>
+      <main>
+        <p>© 2023 Faster Bike Taxi. All rights reserved.</p>
+      </main>
     </div>
   );
 };
