@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
+const API_BASE_URL = process.env.NODE_ENV === 'test' 
+  ? 'http://localhost:8080' 
+  : 'https://8080-cdaebefafaeedecddaabafefccfecdeabcadecaab.premiumproject.examly.io';
+
 const DisplayBikes = () => {
   const [biketaxis, setBiketaxis] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -11,7 +15,7 @@ const DisplayBikes = () => {
 
   const fetchBiketaxis = async () => {
     try {
-      const response = await fetch('https://8080-cdaebefafaeedecddaabafefccfecdeabcadecaab.premiumproject.examly.io/getAllBiketaxi', {
+      const response = await fetch(`${API_BASE_URL}/getAllBiketaxi`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

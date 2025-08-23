@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 
+const API_BASE_URL = process.env.NODE_ENV === 'test' 
+  ? 'http://localhost:8080' 
+  : 'https://8080-cdaebefafaeedecddaabafefccfecdeabcadecaab.premiumproject.examly.io';
+
 const ApplyForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -57,7 +61,7 @@ const ApplyForm = () => {
     }
 
     try {
-      const response = await fetch('https://8080-cdaebefafaeedecddaabafefccfecdeabcadecaab.premiumproject.examly.io/addBiketaxi', {
+      const response = await fetch(`${API_BASE_URL}/addBiketaxi`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
