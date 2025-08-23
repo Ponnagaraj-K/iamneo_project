@@ -11,12 +11,7 @@ const DisplayBikes = () => {
 
   const fetchBiketaxis = async () => {
     try {
-      const response = await fetch('https://8080-cdaebefafaeedecddaabafefccfecdeabcadecaab.premiumproject.examly.io/getAllBiketaxi', {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
+      const response = await fetch('http://localhost:8080/getAllBiketaxi');
       
       if (response.ok) {
         const data = await response.json();
