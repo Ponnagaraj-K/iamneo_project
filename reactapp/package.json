@@ -49,6 +49,7 @@
     "moduleFileExtensions": ["js", "jsx", "json"],
     "moduleNameMapper": {
       "^../components/(.*)$": "<rootDir>/src/components/$1.jsx"
-    }
+    },
+    "setupFilesAfterEnv": ["<rootDir>/src/setupTests.js"]
   }
 }
