@@ -61,8 +61,8 @@ const DisplayBikes = () => {
             </tr>
           </thead>
           <tbody>
-            {biketaxis.map((biketaxi) => (
-              <tr key={biketaxi.id}>
+            {biketaxis.map((biketaxi, index) => (
+              <tr key={biketaxi.id || index}>
                 <td>{biketaxi.name}</td>
                 <td>{biketaxi.bikeNumber}</td>
                 <td>{biketaxi.age}</td>
