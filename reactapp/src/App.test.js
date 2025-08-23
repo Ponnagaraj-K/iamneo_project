@@ -1,11 +1,11 @@
 import { fireEvent, render, screen, waitFor , act} from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import Home from "../components/Home";
-import App from "../App";
-import Navbar from "../components/NavBar";
-import Footer from "../components/Footer";
-import DisplayBikes from "../components/DisplayBikes";
-import ApplyForm from "../components/ApplyForm";
+import Home from "./components/Home";
+import App from "./App";
+import Navbar from "./components/NavBar";
+import Footer from "./components/Footer";
+import DisplayBikes from "./components/DisplayBikes";
+import ApplyForm from "./components/ApplyForm";
 
 
 test("renders_home_component_with_title_and_description", () => {
