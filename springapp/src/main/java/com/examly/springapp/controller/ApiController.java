@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:8081", "https://placement.skcet.ac.in", "https://8081-cdaebefafaeedecddaabafefccfecdeabcadecaab.premiumproject.examly.io"})
+@CrossOrigin(origins = {"http://localhost:8081", "https://placement.skcet.ac.in", "https://8081-cdaebefafaeedecddaabafefccfecdeabcadecaab.premiumproject.examly.io", "https://cdaebefafaeedecddaabafefccfecdeabcadecaab.premiumproject.examly.io"})
 public class ApiController {
     
     @Autowired
