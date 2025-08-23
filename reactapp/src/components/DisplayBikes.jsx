@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-const API_BASE_URL = process.env.NODE_ENV === 'test' 
-  ? 'http://localhost:8080' 
-  : 'https://8080-cdaebefafaeedecddaabafefccfecdeabcadecaab.premiumproject.examly.io';
-
 const DisplayBikes = () => {
   const [biketaxis, setBiketaxis] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -15,7 +11,7 @@ const DisplayBikes = () => {
 
   const fetchBiketaxis = async () => {
     try {
-      const response = await fetch(`${API_BASE_URL}/getAllBiketaxi`, {
+      const response = await fetch('http://localhost:8080/getAllBiketaxi', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -26,10 +22,10 @@ const DisplayBikes = () => {
         const data = await response.json();
         setBiketaxis(data);
       } else {
-        setError('Backend server not running on port 8080');
+        setError('Failed to fetch bike taxi data');
       }
     } catch (error) {
-      setError('Backend server not running. Start Spring Boot app first.');
+      setError('Error connecting to server');
       console.error('Error:', error);
     } finally {
       setLoading(false);
