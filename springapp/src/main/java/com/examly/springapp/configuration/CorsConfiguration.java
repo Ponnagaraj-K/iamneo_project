@@ -14,8 +14,12 @@ public class CorsConfiguration {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:8081", "https://placement.skcet.ac.in")
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                        .allowedOrigins(
+                            "http://localhost:8081", 
+                            "https://placement.skcet.ac.in",
+                            "https://ide-cdaebefafaeedecddaabafefccfecdeabcadecaab.premiumproject.examly.io/proxy/8081"
+                        )
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") 
                         .allowedHeaders("*")
                         .allowCredentials(true);
             }

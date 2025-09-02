@@ -1,0 +1,55 @@
+/* DisplayBikes.css */
+
+.display-container {
+  margin: 30px auto;
+  width: 90%;
+  max-width: 900px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.display-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #0074cc; /* Blue header */
+  color: white;
+  text-align: left;
+  
+}
+
+thead th {
+  padding: 12px;
+  font-weight: bold;
+}
+
+tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+  transition: background 0.3s;
+  margin-left: 500px;
+
+}

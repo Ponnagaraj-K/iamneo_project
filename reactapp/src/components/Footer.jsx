@@ -1,13 +1,12 @@
-import React from 'react';
+import React from "react";
+import "./Footer.css";
 
-const Footer = () => {
+function Footer() {
   return (
-    <div className="footer">
-      <main>
-        <p>© 2023 Faster Bike Taxi. All rights reserved.</p>
-      </main>
-    </div>
+    <footer className="footer">
+      <p>Faster Bike Taxi. All rights reserved.</p>
+    </footer>
   );
-};
+}
 
 export default Footer;

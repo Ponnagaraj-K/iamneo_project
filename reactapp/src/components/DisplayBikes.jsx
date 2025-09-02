@@ -1,75 +1,54 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from "react";
+import "./DisplayBikes.css"; // ✅ Import CSS
 
-const DisplayBikes = () => {
-  const [biketaxis, setBiketaxis] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+const API_BASE = "https://ide-cdaebefafaeedecddaabafefccfecdeabcadecaab.premiumproject.examly.io/proxy/8080";
+
+function DisplayBikes() {
+  const [applications, setApplications] = useState([]);
 
   useEffect(() => {
-    fetchBiketaxis();
+    const fetchData = async () => {
+      try {
+        const res = await fetch(`${API_BASE}/getAllBiketaxi`, {
+          method: "GET",
+          headers: { "Content-Type": "application/json" },
+        });
+        if (res.ok) {
+          const data = await res.json();
+          setApplications(data);
+        }
+      } catch (err) {
+        console.error("Error fetching applications", err);
+      }
+    };
+    fetchData();
   }, []);
 
-  const fetchBiketaxis = async () => {
-    try {
-      const response = await fetch('https://8080-cdaebefafaeedecddaabafefccfecdeabcadecaab.premiumproject.examly.io/getAllBiketaxi', {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-      
-      if (response.ok) {
-        const data = await response.json();
-        setBiketaxis(data);
-      } else {
-        setError('Backend server not running on port 8080');
-      }
-    } catch (error) {
-      setError('Backend server not running. Start Spring Boot app first.');
-      console.error('Error:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  if (loading) {
-    return <div className="loading">Loading...</div>;
-  }
-
-  if (error) {
-    return <div className="error">Error: {error}</div>;
-  }
-
   return (
-    <div className="display-bikes-container">
+    <div className="display-container">
       <h2>Submitted Applications</h2>
-      
-      {biketaxis.length === 0 ? (
-        <p>No applications submitted yet.</p>
-      ) : (
-        <table className="bikes-table">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Bike Number</th>
-              <th>Age</th>
-              <th>Phone Number</th>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Bike Number</th>
+            <th>Age</th>
+            <th>Phone Number</th>
+          </tr>
+        </thead>
+        <tbody>
+          {applications.map((app, index) => (
+            <tr key={index}>
+              <td>{app.name}</td>
+              <td>{app.bikeNumber}</td>
+              <td>{app.age}</td>
+              <td>{app.phoneNumber}</td>
             </tr>
-          </thead>
-          <tbody>
-            {biketaxis.map((biketaxi, index) => (
-              <tr key={biketaxi.id || index}>
-                <td>{biketaxi.name}</td>
-                <td>{biketaxi.bikeNumber}</td>
-                <td>{biketaxi.age}</td>
-                <td>{biketaxi.phoneNumber}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
+          ))}
+        </tbody>
+      </table>
     </div>
   );
-};
+}
 
 export default DisplayBikes;

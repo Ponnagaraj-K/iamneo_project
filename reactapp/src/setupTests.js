@@ -1,11 +1,6 @@
+// src/setupTests.js
 import '@testing-library/jest-dom';
-import fetchMock from 'jest-fetch-mock';
 
-fetchMock.enableMocks();
+// Force mock canvas so Jest never loads the native binary
+jest.mock('canvas', () => ({}));
 
-// Mock fetch globally for tests
-global.fetch = jest.fn();
-
-beforeEach(() => {
-  fetch.mockClear();
-});
